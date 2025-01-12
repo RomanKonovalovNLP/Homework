@@ -1,0 +1,23 @@
+encoding "utf8";
+TTextMinerConfig {
+  Dictionary = "result_verb.gzt";  
+  PrettyOutput = "results.html";
+  Input = {
+    File = "input.txt";
+  }
+
+  Output = { 
+    File = "output.txt";
+  }
+
+  Articles = [
+    { Name = "Результат" }
+  ]
+  Facts = [
+    { Name = "ResultFact" }
+    { Name = "GoalFact"}	
+  ]
+  Output = {
+    Format = text;
+  }
+}

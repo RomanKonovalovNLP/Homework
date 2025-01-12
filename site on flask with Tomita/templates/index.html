@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Извлечение Фактов</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Извлечение Фактов</h1>
+        <p>Это приложение позволяет вам извлекать факты из текста с помощью Томита парсера. Просто введите текст в поле
+            ниже и нажмите кнопку "Извлечь факты". Результаты будут отображены на этой странице.</p>
+        <form action="/extract" method="post">
+            <textarea name="txt" rows="10" cols="50" placeholder="Введите текст здесь..."></textarea>
+            <button type="submit">Извлечь факты</button>
+        </form>
+        {% if results %}
+        <h2>Результаты извлечения:</h2>
+        <pre>{{ results }}</pre>
+        {% endif %}
+        {% if error %}
+        <h2>Ошибка:</h2>
+        <pre>{{ error }}</pre>
+        {% endif %}
+    </div>
+</body>
+
+</html>

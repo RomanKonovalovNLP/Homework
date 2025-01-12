@@ -1,0 +1,11 @@
+﻿import "base.proto";     
+import "articles_base.proto";
+message result_verb : TAuxDicArticle {}
+
+message ResultFact: NFactType.TFact 
+{
+    required string FirstTeam = 1;
+	optional string Result = 2;
+    required string SecondTeam = 3;
+    optional string Score = 4;
+}

@@ -1,0 +1,9 @@
+import "base.proto";     
+import "articles_base.proto";
+message goal_verb : TAuxDicArticle {}
+
+message GoalFact: NFactType.TFact 
+{
+	optional string Name = 1;
+	optional string Time = 2;
+}

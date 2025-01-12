@@ -1,0 +1,29 @@
+encoding "utf8";
+import "base.proto";     
+import "articles_base.proto";
+import "kwtypes_football.proto";
+import "goal_facts.proto";
+TAuxDicArticle "Результат"
+{
+    key = { "tomita:football_result.cxx" type=CUSTOM }
+}
+result_verb "победа"
+{
+    key = "победить" | "выиграть" | "разгромить" | "одолеть";
+    lemma = "победа"
+}
+result_verb "поражение"
+{
+    key = "проиграть" | "уступить" | "продуть";
+    lemma = "поражение"
+}
+result_verb "ничья"
+{
+    key = "сыграли вничью" | "разошлись миром" | "смочь выявить";
+    lemma = "ничья"
+}
+
+goal_verb "гол"
+{
+    key = "забить" | "отметиться";
+}
